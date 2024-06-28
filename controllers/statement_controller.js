@@ -1,6 +1,8 @@
 import { request } from "express";
 import { StatementModel } from "../models/statement_model.js";
 
+
+// Function to add or store data in a database
 export const addStatement = async (req,res) => {
     try{
         console.log('request', req.body)
@@ -12,6 +14,7 @@ export const addStatement = async (req,res) => {
     
 }
 
+// Function to display all the statements in a database
 export const getStatement = async (req,res) => {
   try {
       console.log('request', req.body)
@@ -21,6 +24,7 @@ export const getStatement = async (req,res) => {
     console.log(error);
   }
 }
+// Function to display a particular/single statement from a database
  export const getStatementById = async (req,res) => {
     try {
         console.log('request', req.body)
@@ -31,6 +35,7 @@ export const getStatement = async (req,res) => {
     }
  }
 
+//  Function to update a particular statement
  export const updateStatementbyId = async (req,res) => {
     try {
         const status = req.body.caseStatus;
@@ -42,6 +47,7 @@ export const getStatement = async (req,res) => {
     }
  }
 
+//  Function to delete a whole object statement from a database
  export const deleteStatementbyId = async (req,res) => {
     try {
         console.log('request',req.body)
